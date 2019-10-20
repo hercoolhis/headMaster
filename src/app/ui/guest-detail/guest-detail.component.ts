@@ -4,7 +4,7 @@ import {UiService} from '../../services/ui/ui.service';
 import {Subscription} from 'rxjs';
 import {first} from 'rxjs/operators';
 import {FbService} from '../../services/fb/fb.service';
-import { HttpClient } from "@angular/common/http";
+import { HttpClient, HttpHeaders } from "@angular/common/http";
 
 @Component({
   selector: 'app-guest-card',
@@ -23,6 +23,12 @@ export class GuestDetailComponent implements OnInit, OnDestroy {
           this.guestFirstName = guest.first_name;
           this.guestLastName = guest.last_name;
           this.guestGender = guest.gender;
+          this.guestId = guest.id;
+
+          if (guest.checked_in === true) {
+            this.guestCheckedInStatus = true;
+            this.guestCheckedInTime = guest.checked_in_date;
+          }
         }
       });
        
@@ -44,6 +50,10 @@ export class GuestDetailComponent implements OnInit, OnDestroy {
   guestFirstName: string;
   guestLastName: string;
   guestGender: string;
+  guestId: number;
+  guestCheckedInStatus = false;
+  guestCheckedInTime: Date;
+  checkInSuccess = false;
   sub1;
   guestChecked = false;
 
@@ -68,7 +78,17 @@ export class GuestDetailComponent implements OnInit, OnDestroy {
   }
 
   checkGuestIn() {
+    let headers = new HttpHeaders();
+    headers = headers.set('Content-Type', 'application/json; charset=utf-8');
 
+    this.http.patch(`http://localhost:3000/guests/${this.guestId}`, { checked_in : true, checked_in_date: new Date().toString() }).subscribe((data) => {
+      console.log(`Put request successful, ${data}`);
+      this.checkInSuccess = true;
+      this.guestEmail = null;
+      this.guestCheckedIn.emit();
+      setTimeout(() => this.checkInSuccess = false, 2000);
+  
+    });
   }
 
   // addCity() {
