@@ -1,10 +1,10 @@
 import {Component, EventEmitter, Input, OnDestroy, OnInit, Output} from '@angular/core';
 import {Router} from '@angular/router';
 import {UiService} from '../../services/ui/ui.service';
-import {Subscription} from 'rxjs';
 import {first} from 'rxjs/operators';
 import {FbService} from '../../services/fb/fb.service';
-import { HttpClient, HttpHeaders } from "@angular/common/http";
+import { HttpHeaders } from "@angular/common/http";
+import { GuestsService } from "../../services/guests.service";
 
 @Component({
   selector: 'app-guest-card',
@@ -13,11 +13,13 @@ import { HttpClient, HttpHeaders } from "@angular/common/http";
 })
 export class GuestDetailComponent implements OnInit, OnDestroy {
 
+  
+
   @Input() set guest(guest: string) {
     this.guestEmail = guest;   
 
     //get Guest Details
-    this.http.get('http://localhost:3000/guests').pipe((first())).subscribe((allGuests: Array<any>) => {
+    this.gs.getAllGuests().pipe((first())).subscribe((allGuests: Array<any>) => {
       allGuests.forEach((guest: any) => {
         if (guest.email === this.guestEmail) {
           this.guestFirstName = guest.first_name;
@@ -34,10 +36,6 @@ export class GuestDetailComponent implements OnInit, OnDestroy {
        
     });
 
-    
-
-      
-    
 
   }
 
@@ -55,17 +53,27 @@ export class GuestDetailComponent implements OnInit, OnDestroy {
   guestCheckedInTime: Date;
   checkInSuccess = false;
   sub1;
+  checkedInNumber:number;
+  checkedInPercentage;
+  totalGuestNumber:number;
   guestChecked = false;
 
   constructor(public router: Router,
               public ui: UiService,
               public fb: FbService,
-              public http: HttpClient) {
+              public gs: GuestsService) {
   }
 
   ngOnInit() {
     this.sub1 = this.ui.darkModeState.subscribe((isDark) => {
       this.darkMode = isDark;
+    });
+    this.gs.checkedInNumber.subscribe((value) => {
+      this.checkedInNumber = value;     
+    });
+
+    this.gs.totalNumber.subscribe((value) => {
+      this.totalGuestNumber = value;     
     });
   }
 
@@ -73,36 +81,29 @@ export class GuestDetailComponent implements OnInit, OnDestroy {
     this.sub1.unsubscribe();
   }
 
-  openDetails() {
-    
-  }
+  openDetails() {}
 
   checkGuestIn() {
     let headers = new HttpHeaders();
     headers = headers.set('Content-Type', 'application/json; charset=utf-8');
 
-    this.http.patch(`http://localhost:3000/guests/${this.guestId}`, { checked_in : true, checked_in_date: new Date().toString() }).subscribe((data) => {
-      console.log(`Put request successful, ${data}`);
+    let updateObject = { checked_in : true, checked_in_date: new Date().toString() };
+
+    this.gs.updateSingleGuest(this.guestId, updateObject).subscribe((data) => {
       this.checkInSuccess = true;
       this.guestEmail = null;
+      this.gs.checkedInNumber.next(this.checkedInNumber + 1);
+
+      this.checkedInPercentage = ((this.checkedInNumber / this.totalGuestNumber) * 100).toFixed(2);      
+      this.gs.checkedInPercentage.next(this.checkedInPercentage);
+
+
       this.guestCheckedIn.emit();
       setTimeout(() => this.checkInSuccess = false, 2000);
   
     });
   }
 
-  // addCity() {
-  //   this.fb.addCity(this.cityName).subscribe(() => {
-  //     this.cityName = null;
-  //     this.maxTemp = null;
-  //     this.minTemp = null;
-  //     this.state = null;
-  //     this.temp = null;
-  //     this.cityAdded = true;
-  //     this.cityStored.emit();
-  //     setTimeout(() => this.cityAdded = false, 2000);
-  //   });
-  // }
 
 
 }

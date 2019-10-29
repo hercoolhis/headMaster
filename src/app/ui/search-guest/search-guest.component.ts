@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from "@angular/common/http";
-import { first } from "rxjs/operators";
+import { GuestsService } from "../../services/guests.service";
 
 
 @Component({
@@ -13,24 +12,55 @@ export class SearchGuestComponent implements OnInit {
   guests = [];
   cardGuest;
   showNote = false;
+  allGuestNumber;
+  checkedInGuestsNumber = 0;
+  checkedInPercentage;
 
-  constructor(public http: HttpClient) { }
+  constructor(public gs: GuestsService) { }
 
   ngOnInit() {
     this.getAllGuests();
+    this.gs.checkedInNumber.subscribe((value) => {
+      this.checkedInGuestsNumber = value;
+    });
+    this.gs.checkedInPercentage.subscribe((value) => {
+      this.checkedInPercentage = value;
+    });
+
+    this.gs.totalNumber.subscribe((value) => {
+      this.allGuestNumber = value;
+    });
  }
 
   getAllGuests() {
-    this.http.get('http://localhost:3000/guests').pipe((first())).subscribe((allGuests: Array<any>) => {
+
+    this.gs.getAllGuests().subscribe((allGuests: Array<any>) => {      
       allGuests.forEach((guest: any) => {
+        
         if (guest.email.length) {
           this.guests.push(guest.email);
-        }
-      });
-      this.guests.sort();      
-    });
-  }
+        }        
 
+        if (guest.checked_in) {
+          if (guest.checked_in === true) {
+            this.checkedInGuestsNumber++;
+          }
+        }
+      });    
+
+      this.guests.sort(); 
+      this.allGuestNumber = this.guests.length; 
+      this.gs.checkedInNumber.next(this.checkedInGuestsNumber);
+      this.gs.totalNumber.next(this.guests.length);
+      
+      //calculate percentage
+      this.checkedInPercentage = ((this.checkedInGuestsNumber / this.allGuestNumber) * 100).toFixed(2);
+      this.gs.checkedInPercentage.next(this.checkedInPercentage);
+
+          
+    });
+  }  
+ 
   findGuest(guest) {
     if (this.guests.includes(guest)) {
       this.cardGuest = guest;

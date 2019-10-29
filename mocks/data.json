@@ -7,7 +7,7 @@
       "gender": "Male",
       "id": 1,
       "checked_in": true,
-      "checked_in_date": "Sun Oct 20 2019 01:10:49 GMT+0100 (West Africa Standard Time)"
+      "checked_in_date": "Tue Oct 29 2019 16:17:07 GMT+0100 (West Africa Standard Time)"
     },
     {
       "id": 2,
@@ -16,7 +16,7 @@
       "email": "ccopplestone1@devhub.com",
       "gender": "Male",
       "checked_in": true,
-      "checked_in_date": "Sun Oct 20 2019 01:11:10 GMT+0100 (West Africa Standard Time)"
+      "checked_in_date": "Tue Oct 29 2019 16:17:16 GMT+0100 (West Africa Standard Time)"
     },
     {
       "id": 3,
@@ -24,15 +24,16 @@
       "last_name": "Verna",
       "email": "kverna2@si.edu",
       "gender": "Male",
-      "checked_in": false,
-      "checked_in_date": "Sun Oct 20 2019 00:57:49 GMT+0100 (West Africa Standard Time)"
+      "checked_in": false
     },
     {
       "id": 4,
       "first_name": "Gerhardt",
       "last_name": "Tenman",
       "email": "gtenman3@netlog.com",
-      "gender": "Male"
+      "gender": "Male",
+      "checked_in": true,
+      "checked_in_date": "Tue Oct 29 2019 17:14:22 GMT+0100 (West Africa Standard Time)"
     },
     {
       "id": 5,
@@ -40,8 +41,8 @@
       "last_name": "Whitnall",
       "email": "ewhitnall4@mapy.cz",
       "gender": "Female",
-      "checked_in": false,
-      "checked_in_date": "Sat Oct 19 2019"
+      "checked_in": true,
+      "checked_in_date": "Tue Oct 29 2019 16:49:49 GMT+0100 (West Africa Standard Time)"
     },
     {
       "id": 6,
@@ -49,8 +50,8 @@
       "last_name": "Kuhlmey",
       "email": "rkuhlmey5@pinterest.com",
       "gender": "Male",
-      "checked_in": false,
-      "checked_in_date": "Sun Oct 20 2019 01:03:28 GMT+0100 (West Africa Standard Time)"
+      "checked_in": true,
+      "checked_in_date": "Tue Oct 29 2019 17:05:09 GMT+0100 (West Africa Standard Time)"
     },
     {
       "id": 8,
@@ -58,29 +59,33 @@
       "last_name": "Hellwig",
       "email": "thellwig7@independent.co.uk",
       "gender": "Male",
-      "checked_in": false,
-      "checked_in_date": "Sun Oct 20 2019 01:03:38 GMT+0100 (West Africa Standard Time)"
+      "checked_in": true,
+      "checked_in_date": "Tue Oct 29 2019 17:04:00 GMT+0100 (West Africa Standard Time)"
     },
     {
       "id": 9,
       "first_name": "Mimi",
       "last_name": "Hyrons",
       "email": "mhyrons8@indiatimes.com",
-      "gender": "Female"
+      "gender": "Female",
+      "checked_in": "false"
     },
     {
       "id": 10,
       "first_name": "Lamont",
       "last_name": "Lifsey",
       "email": "llifsey9@arizona.edu",
-      "gender": "Male"
+      "gender": "Male",
+      "checked_in": false
     },
     {
       "id": 11,
       "first_name": "Maynord",
       "last_name": "Vreiberg",
       "email": "mvreiberga@devhub.com",
-      "gender": "Male"
+      "gender": "Male",
+      "checked_in": true,
+      "checked_in_date": "Tue Oct 29 2019 17:13:38 GMT+0100 (West Africa Standard Time)"
     },
     {
       "id": 12,
@@ -89,7 +94,7 @@
       "email": "bramab@wired.com",
       "gender": "Male",
       "checked_in": true,
-      "checked_in_date": "Sun Oct 20 2019 01:11:00 GMT+0100 (West Africa Standard Time)"
+      "checked_in_date": "Tue Oct 29 2019 16:48:26 GMT+0100 (West Africa Standard Time)"
     },
     {
       "id": 13,
@@ -98,7 +103,7 @@
       "email": "gcouronnec@rakuten.co.jp",
       "gender": "Male",
       "checked_in": true,
-      "checked_in_date": "Sun Oct 20 2019 01:13:40 GMT+0100 (West Africa Standard Time)"
+      "checked_in_date": "Tue Oct 29 2019 16:55:13 GMT+0100 (West Africa Standard Time)"
     },
     {
       "id": 14,
@@ -106,7 +111,8 @@
       "last_name": "Abelovitz",
       "email": "jabelovitzd@state.gov",
       "gender": "Male",
-      "checked_in": false
+      "checked_in": true,
+      "checked_in_date": "Tue Oct 29 2019 17:12:04 GMT+0100 (West Africa Standard Time)"
     },
     {
       "id": 15,
@@ -115,7 +121,7 @@
       "email": "slevinse@chron.com",
       "gender": "Female",
       "checked_in": true,
-      "checked_in_date": "Sun Oct 20 2019 01:15:33 GMT+0100 (West Africa Standard Time)"
+      "checked_in_date": "Tue Oct 29 2019 17:06:07 GMT+0100 (West Africa Standard Time)"
     },
     {
       "id": 16,
@@ -124,7 +130,7 @@
       "email": "kmayberyf@economist.com",
       "gender": "Female",
       "checked_in": true,
-      "checked_in_date": "Sun Oct 20 2019 01:16:07 GMT+0100 (West Africa Standard Time)"
+      "checked_in_date": "Tue Oct 29 2019 17:10:45 GMT+0100 (West Africa Standard Time)"
     },
     {
       "id": 17,
@@ -132,8 +138,7 @@
       "last_name": "Hansard",
       "email": "jhansardg@purevolume.com",
       "gender": "Female",
-      "checked_in": true,
-      "checked_in_date": "Sun Oct 20 2019 01:13:25 GMT+0100 (West Africa Standard Time)"
+      "checked_in": false
     },
     {
       "id": 18,
@@ -142,7 +147,7 @@
       "email": "hpazh@google.es",
       "gender": "Male",
       "checked_in": true,
-      "checked_in_date": "Sun Oct 20 2019 01:15:40 GMT+0100 (West Africa Standard Time)"
+      "checked_in_date": "Tue Oct 29 2019 17:07:51 GMT+0100 (West Africa Standard Time)"
     },
     {
       "id": 19,
@@ -150,8 +155,7 @@
       "last_name": "Paviour",
       "email": "gpaviouri@goo.gl",
       "gender": "Male",
-      "checked_in": false,
-      "checked_in_date": "Sun Oct 20 2019 00:19:11 GMT+0100 (West Africa Standard Time)"
+      "checked_in": false
     }
   ]
 }
