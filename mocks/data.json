@@ -138,7 +138,8 @@
       "last_name": "Hansard",
       "email": "jhansardg@purevolume.com",
       "gender": "Female",
-      "checked_in": false
+      "checked_in": true,
+      "checked_in_date": "Wed Oct 30 2019 14:02:24 GMT+0100 (West Africa Standard Time)"
     },
     {
       "id": 18,
@@ -155,7 +156,17 @@
       "last_name": "Paviour",
       "email": "gpaviouri@goo.gl",
       "gender": "Male",
-      "checked_in": false
+      "checked_in": true,
+      "checked_in_date": "Wed Oct 30 2019 14:00:20 GMT+0100 (West Africa Standard Time)"
+    },
+    {
+      "id": 20,
+      "first_name": "Lanre",
+      "last_name": "Agbenla",
+      "email": "hercoolhis@gmail.com",
+      "gender": "Male",
+      "checked_in": true,
+      "checked_in_date": "Wed Oct 30 2019 11:46:22 GMT+0100 (West Africa Standard Time)"
     }
   ]
 }

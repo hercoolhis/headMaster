@@ -1,0 +1,6 @@
+<div style="display: inline-flex; flex-wrap: wrap; justify-content: center;" class="main__container">
+    <div *ngFor="let guest of last5Guests">        
+        <app-guest-card [guest]="guest?.email"></app-guest-card>
+    </div>
+</div>
+

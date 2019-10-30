@@ -16,7 +16,7 @@
     <section class="menu-body">
       <ul class="menu-links" [ngClass]="{'menu-links-dark': darkModeActive}">
         <li class="menu-link" [routerLinkActiveOptions]="{exact:true}" routerLink="" routerLinkActive="link-active" (click)="toggleMenu()">Home</li>
-        <li class="menu-link" [routerLinkActiveOptions]="{exact:true}" routerLink="/add" routerLinkActive="link-active" (click)="toggleMenu()">Add City</li>
+        <li class="menu-link" [routerLinkActiveOptions]="{exact:true}" routerLink="/history" routerLinkActive="link-active" (click)="toggleMenu()">Last 5 Check-Ins</li>
         <li (click)="logout()" class="menu-link">Logout</li>
       </ul>
     </section>

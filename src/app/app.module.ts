@@ -14,6 +14,7 @@ import { SearchGuestComponent } from './ui/search-guest/search-guest.component';
 import { NguiAutoCompleteModule } from "@ngui/auto-complete";
 import { HttpClientModule } from "@angular/common/http";
 import { GuestDetailComponent } from './ui/guest-detail/guest-detail.component';
+import { HistoryComponent } from './ui/history/history.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { GuestDetailComponent } from './ui/guest-detail/guest-detail.component';
     SignupComponent,
     ErrorComponent,
     SearchGuestComponent,
-    GuestDetailComponent
+    GuestDetailComponent,
+    HistoryComponent
   ],
   imports: [
     BrowserModule,
