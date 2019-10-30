@@ -24,8 +24,7 @@ export class HistoryComponent implements OnInit {
     let Last5CheckedInGuest = await this.gs.getLast5CheckedInGuest();
 
     this.gs.last5Guests.next(Last5CheckedInGuest);
-
-    console.log(this.last5Guests);
+    
   }
 
 }

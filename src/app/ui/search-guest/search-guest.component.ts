@@ -20,11 +20,15 @@ export class SearchGuestComponent implements OnInit {
 
   ngOnInit() {
     this.getAllGuests();
+
     this.gs.checkedInNumber.subscribe((value) => {
       this.checkedInGuestsNumber = value;
+      console.log(value);
+      
     });
     this.gs.checkedInPercentage.subscribe((value) => {
       this.checkedInPercentage = value;
+      
     });
 
     this.gs.totalNumber.subscribe((value) => {
@@ -34,7 +38,9 @@ export class SearchGuestComponent implements OnInit {
 
   getAllGuests() {
 
-    this.gs.getAllGuests().subscribe((allGuests: Array<any>) => {      
+    this.gs.getAllGuests().subscribe((allGuests: Array<any>) => {  
+      
+      this.checkedInGuestsNumber = 0;
       allGuests.forEach((guest: any) => {
         
         if (guest.email.length) {
@@ -46,7 +52,9 @@ export class SearchGuestComponent implements OnInit {
             this.checkedInGuestsNumber++;
           }
         }
-      });    
+      });   
+      
+      console.log(this.checkedInGuestsNumber, "It is here");
 
       this.guests.sort(); 
       this.allGuestNumber = this.guests.length; 

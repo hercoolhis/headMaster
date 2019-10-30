@@ -24,7 +24,8 @@
       "last_name": "Verna",
       "email": "kverna2@si.edu",
       "gender": "Male",
-      "checked_in": false
+      "checked_in": true,
+      "checked_in_date": "Wed Oct 30 2019 14:13:31 GMT+0100 (West Africa Standard Time)"
     },
     {
       "id": 4,
@@ -68,7 +69,8 @@
       "last_name": "Hyrons",
       "email": "mhyrons8@indiatimes.com",
       "gender": "Female",
-      "checked_in": "false"
+      "checked_in": true,
+      "checked_in_date": "Wed Oct 30 2019 14:21:47 GMT+0100 (West Africa Standard Time)"
     },
     {
       "id": 10,
@@ -76,7 +78,8 @@
       "last_name": "Lifsey",
       "email": "llifsey9@arizona.edu",
       "gender": "Male",
-      "checked_in": false
+      "checked_in": true,
+      "checked_in_date": "Wed Oct 30 2019 14:06:20 GMT+0100 (West Africa Standard Time)"
     },
     {
       "id": 11,
