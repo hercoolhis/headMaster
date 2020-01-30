@@ -23,11 +23,6 @@
     <div style="display: flex; flex-direction: column;">
         
     </div>
- 
-
-
-
-
 
     <div class="city-search-wrapper">
 
@@ -37,7 +32,7 @@
         <h3 class="city-search-title">SEARCH GUEST</h3>
         <div class="search-city-input-wrapper">
           <input class="search-city-input" auto-complete-placeholder="search guest" placeholder="search guest"
-            auto-complete [(ngModel)]="edCity" (keyup.enter)="findGuest(input.value)"
+            auto-complete (keyup.enter)="findGuest(input.value)"
             (ngModelChange)="findGuest(input.value)" [source]="guests" [max-num-list]="5" [close-on-focusout]="false"
             #input />
 
@@ -55,9 +50,7 @@
 
       <div class="city-search-body">
         <span *ngIf="showNote" class="city-invalid-note">Guest Not Found</span>
-        <app-guest-card (guestCheckedIn)="checkedInGuest = ''" *ngIf="cardGuest" [guest]="cardGuest"></app-guest-card>
-        <!-- <app-weather-card (cityStored)="selectedCity = ''" *ngIf="cardCity" [gue]="cardCity" [addMode]="true">
-              </app-weather-card> -->
+        <app-guest-card *ngIf="cardGuest" [guest]="cardGuest"></app-guest-card>       
       </div>
 
     </div>

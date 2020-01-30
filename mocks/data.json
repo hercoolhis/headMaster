@@ -1,175 +1,159 @@
 {
-  "guests": [
-    {
-      "first_name": "Sulaiman",
-      "last_name": "Agbenla",
-      "email": "agbenla.lanre@gmail.com",
-      "gender": "Male",
-      "id": 1,
-      "checked_in": true,
-      "checked_in_date": "Tue Oct 29 2019 16:17:07 GMT+0100 (West Africa Standard Time)"
-    },
-    {
-      "id": 2,
-      "first_name": "Clayton",
-      "last_name": "Copplestone",
-      "email": "ccopplestone1@devhub.com",
-      "gender": "Male",
-      "checked_in": true,
-      "checked_in_date": "Tue Oct 29 2019 16:17:16 GMT+0100 (West Africa Standard Time)"
-    },
-    {
-      "id": 3,
-      "first_name": "Kennie",
-      "last_name": "Verna",
-      "email": "kverna2@si.edu",
-      "gender": "Male",
-      "checked_in": true,
-      "checked_in_date": "Wed Oct 30 2019 14:13:31 GMT+0100 (West Africa Standard Time)"
-    },
-    {
-      "id": 4,
-      "first_name": "Gerhardt",
-      "last_name": "Tenman",
-      "email": "gtenman3@netlog.com",
-      "gender": "Male",
-      "checked_in": true,
-      "checked_in_date": "Tue Oct 29 2019 17:14:22 GMT+0100 (West Africa Standard Time)"
-    },
-    {
-      "id": 5,
-      "first_name": "Etti",
-      "last_name": "Whitnall",
-      "email": "ewhitnall4@mapy.cz",
-      "gender": "Female",
-      "checked_in": true,
-      "checked_in_date": "Tue Oct 29 2019 16:49:49 GMT+0100 (West Africa Standard Time)"
-    },
-    {
-      "id": 6,
-      "first_name": "Reynard",
-      "last_name": "Kuhlmey",
-      "email": "rkuhlmey5@pinterest.com",
-      "gender": "Male",
-      "checked_in": true,
-      "checked_in_date": "Tue Oct 29 2019 17:05:09 GMT+0100 (West Africa Standard Time)"
-    },
-    {
-      "id": 8,
-      "first_name": "Teodorico",
-      "last_name": "Hellwig",
-      "email": "thellwig7@independent.co.uk",
-      "gender": "Male",
-      "checked_in": true,
-      "checked_in_date": "Tue Oct 29 2019 17:04:00 GMT+0100 (West Africa Standard Time)"
-    },
-    {
-      "id": 9,
-      "first_name": "Mimi",
-      "last_name": "Hyrons",
-      "email": "mhyrons8@indiatimes.com",
-      "gender": "Female",
-      "checked_in": true,
-      "checked_in_date": "Wed Oct 30 2019 14:21:47 GMT+0100 (West Africa Standard Time)"
-    },
-    {
-      "id": 10,
-      "first_name": "Lamont",
-      "last_name": "Lifsey",
-      "email": "llifsey9@arizona.edu",
-      "gender": "Male",
-      "checked_in": true,
-      "checked_in_date": "Wed Oct 30 2019 14:06:20 GMT+0100 (West Africa Standard Time)"
-    },
-    {
-      "id": 11,
-      "first_name": "Maynord",
-      "last_name": "Vreiberg",
-      "email": "mvreiberga@devhub.com",
-      "gender": "Male",
-      "checked_in": true,
-      "checked_in_date": "Tue Oct 29 2019 17:13:38 GMT+0100 (West Africa Standard Time)"
-    },
-    {
-      "id": 12,
-      "first_name": "Bayard",
-      "last_name": "Rama",
-      "email": "bramab@wired.com",
-      "gender": "Male",
-      "checked_in": true,
-      "checked_in_date": "Tue Oct 29 2019 16:48:26 GMT+0100 (West Africa Standard Time)"
-    },
-    {
-      "id": 13,
-      "first_name": "Garfield",
-      "last_name": "Couronne",
-      "email": "gcouronnec@rakuten.co.jp",
-      "gender": "Male",
-      "checked_in": true,
-      "checked_in_date": "Tue Oct 29 2019 16:55:13 GMT+0100 (West Africa Standard Time)"
-    },
-    {
-      "id": 14,
-      "first_name": "Jedidiah",
-      "last_name": "Abelovitz",
-      "email": "jabelovitzd@state.gov",
-      "gender": "Male",
-      "checked_in": true,
-      "checked_in_date": "Tue Oct 29 2019 17:12:04 GMT+0100 (West Africa Standard Time)"
-    },
-    {
-      "id": 15,
-      "first_name": "Suzie",
-      "last_name": "Levins",
-      "email": "slevinse@chron.com",
-      "gender": "Female",
-      "checked_in": true,
-      "checked_in_date": "Tue Oct 29 2019 17:06:07 GMT+0100 (West Africa Standard Time)"
-    },
-    {
-      "id": 16,
-      "first_name": "Kirby",
-      "last_name": "Maybery",
-      "email": "kmayberyf@economist.com",
-      "gender": "Female",
-      "checked_in": true,
-      "checked_in_date": "Tue Oct 29 2019 17:10:45 GMT+0100 (West Africa Standard Time)"
-    },
-    {
-      "id": 17,
-      "first_name": "Jobie",
-      "last_name": "Hansard",
-      "email": "jhansardg@purevolume.com",
-      "gender": "Female",
-      "checked_in": true,
-      "checked_in_date": "Wed Oct 30 2019 14:02:24 GMT+0100 (West Africa Standard Time)"
-    },
-    {
-      "id": 18,
-      "first_name": "Heath",
-      "last_name": "Paz",
-      "email": "hpazh@google.es",
-      "gender": "Male",
-      "checked_in": true,
-      "checked_in_date": "Tue Oct 29 2019 17:07:51 GMT+0100 (West Africa Standard Time)"
-    },
-    {
-      "id": 19,
-      "first_name": "Giffy",
-      "last_name": "Paviour",
-      "email": "gpaviouri@goo.gl",
-      "gender": "Male",
-      "checked_in": true,
-      "checked_in_date": "Wed Oct 30 2019 14:00:20 GMT+0100 (West Africa Standard Time)"
-    },
-    {
-      "id": 20,
-      "first_name": "Lanre",
-      "last_name": "Agbenla",
-      "email": "hercoolhis@gmail.com",
-      "gender": "Male",
-      "checked_in": true,
-      "checked_in_date": "Wed Oct 30 2019 11:46:22 GMT+0100 (West Africa Standard Time)"
-    }
-  ]
+    "demoGuests": [
+      {
+        "first_name": "Sulaiman",
+        "last_name": "Agbenla",
+        "email": "agbenla.lanre@gmail.com",
+        "gender": "Male",      
+        "checked_in": false
+       
+      },
+      {
+        "first_name": "Clayton",
+        "last_name": "Copplestone",
+        "email": "ccopplestone1@devhub.com",
+        "gender": "Male",
+        "checked_in": false
+        
+      },
+      {
+        
+        "first_name": "Kennie",
+        "last_name": "Verna",
+        "email": "kverna2@si.edu",
+        "gender": "Male",
+        "checked_in": false
+      },
+      {
+        
+        "first_name": "Gerhardt",
+        "last_name": "Tenman",
+        "email": "gtenman3@netlog.com",
+        "gender": "Male",
+        "checked_in": false
+      },
+      {
+        
+        "first_name": "Etti",
+        "last_name": "Whitnall",
+        "email": "ewhitnall4@mapy.cz",
+        "gender": "Female",
+        "checked_in": false
+      },
+      {
+        
+        "first_name": "Reynard",
+        "last_name": "Kuhlmey",
+        "email": "rkuhlmey5@pinterest.com",
+        "gender": "Male",
+        "checked_in": false
+      },
+      {
+        
+        "first_name": "Teodorico",
+        "last_name": "Hellwig",
+        "email": "thellwig7@independent.co.uk",
+        "gender": "Male",
+        "checked_in": false
+      },
+      {
+        
+        "first_name": "Mimi",
+        "last_name": "Hyrons",
+        "email": "mhyrons8@indiatimes.com",
+        "gender": "Female",
+        "checked_in": false
+      },
+      {
+        
+        "first_name": "Lamont",
+        "last_name": "Lifsey",
+        "email": "llifsey9@arizona.edu",
+        "gender": "Male",
+        "checked_in": false
+      },
+      {
+        
+        "first_name": "Maynord",
+        "last_name": "Vreiberg",
+        "email": "mvreiberga@devhub.com",
+        "gender": "Male",
+        "checked_in": false
+      },
+      {
+        
+        "first_name": "Bayard",
+        "last_name": "Rama",
+        "email": "bramab@wired.com",
+        "gender": "Male",
+        "checked_in": false
+      },
+      {
+        
+        "first_name": "Garfield",
+        "last_name": "Couronne",
+        "email": "gcouronnec@rakuten.co.jp",
+        "gender": "Male",
+        "checked_in": false
+      },
+      {
+        
+        "first_name": "Jedidiah",
+        "last_name": "Abelovitz",
+        "email": "jabelovitzd@state.gov",
+        "gender": "Male",
+        "checked_in": false
+      },
+      {
+        
+        "first_name": "Suzie",
+        "last_name": "Levins",
+        "email": "slevinse@chron.com",
+        "gender": "Female",
+        "checked_in": false
+      },
+      {
+        
+        "first_name": "Kirby",
+        "last_name": "Maybery",
+        "email": "kmayberyf@economist.com",
+        "gender": "Female",
+        "checked_in": false
+      },
+      {
+        
+        "first_name": "Jobie",
+        "last_name": "Hansard",
+        "email": "jhansardg@purevolume.com",
+        "gender": "Female",
+        "checked_in": false
+      },
+      {
+        
+        "first_name": "Heath",
+        "last_name": "Paz",
+        "email": "hpazh@google.es",
+        "gender": "Male",
+        "checked_in": false
+      },
+      {
+        
+        "first_name": "Giffy",
+        "last_name": "Paviour",
+        "email": "gpaviouri@goo.gl",
+        "gender": "Male",
+        "checked_in": false
+      },
+      {
+        
+        "first_name": "Lanre",
+        "last_name": "Agbenla",
+        "email": "hercoolhis@gmail.com",
+        "gender": "Male",
+        "checked_in": false
+      }
+    ]
+  
+    
+  
 }

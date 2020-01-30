@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { GuestsService } from "../../services/guests.service";
+import { map } from "rxjs/operators";
 
 
 @Component({
@@ -19,16 +20,14 @@ export class SearchGuestComponent implements OnInit {
   constructor(public gs: GuestsService) { }
 
   ngOnInit() {
-    this.getAllGuests();
+    this.getAllGuests();    
 
     this.gs.checkedInNumber.subscribe((value) => {
       this.checkedInGuestsNumber = value;
-      console.log(value);
-      
+     
     });
     this.gs.checkedInPercentage.subscribe((value) => {
-      this.checkedInPercentage = value;
-      
+      this.checkedInPercentage = value;      
     });
 
     this.gs.totalNumber.subscribe((value) => {
@@ -38,26 +37,29 @@ export class SearchGuestComponent implements OnInit {
 
   getAllGuests() {
 
-    this.gs.getAllGuests().subscribe((allGuests: Array<any>) => {  
+      this.gs.getAllGuests().snapshotChanges().pipe(
+        map(changes =>
+          changes.map(c =>
+            ({ key: c.payload.key, ...c.payload.val() })
+          )
+        )
+      ).subscribe((allGuests: Array<any>) => {  
       
-      this.checkedInGuestsNumber = 0;
-      allGuests.forEach((guest: any) => {
-        
-        if (guest.email.length) {
-          this.guests.push(guest.email);
-        }        
-
-        if (guest.checked_in) {
-          if (guest.checked_in === true) {
-            this.checkedInGuestsNumber++;
+        this.checkedInGuestsNumber = 0;
+        this.allGuestNumber = 0;
+        allGuests.forEach((guest: any) => {
+          if (guest.email.length) {
+            this.guests.push(guest.email);
+          }          
+          if (guest.checked_in) {
+            if (guest.checked_in === true) {
+              this.checkedInGuestsNumber++;
+            }
           }
-        }
-      });   
+        });
       
-      console.log(this.checkedInGuestsNumber, "It is here");
-
       this.guests.sort(); 
-      this.allGuestNumber = this.guests.length; 
+      //this.allGuestNumber = this.guests.length; 
       this.gs.checkedInNumber.next(this.checkedInGuestsNumber);
       this.gs.totalNumber.next(this.guests.length);
       

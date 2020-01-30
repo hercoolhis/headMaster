@@ -8,7 +8,7 @@ import { FbService } from "../../services/fb/fb.service";
 })
 export class HomeComponent implements OnInit {
 
-  cities
+  cities;
 
   constructor(public fb: FbService) { }
 

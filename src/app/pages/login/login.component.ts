@@ -8,7 +8,9 @@ import {Router} from '@angular/router';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
+
 export class LoginComponent implements OnInit {
+
   errorMessage = '';
   constructor(public fb: FbService, public router: Router) {
   }
@@ -17,9 +19,11 @@ export class LoginComponent implements OnInit {
   }
 
   login(e) {
-    this.fb.signin(e.target.email.value, e.target.password.value).pipe(first()).subscribe(() => {
+    const { target: { email, password }  } = e;
+    this.fb.signin(email.value, password.value).pipe(first()).subscribe(() => {
       this.router.navigateByUrl('');
-    },(err) => {
+    },
+    (err) => {
       this.errorMessage = err;
       setTimeout(() => this.errorMessage = '', 2000);
     });

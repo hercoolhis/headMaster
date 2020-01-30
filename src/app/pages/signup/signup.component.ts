@@ -18,7 +18,9 @@ export class SignupComponent implements OnInit {
   }
 
   signup(e) {
-    this.fb.signup(e.target.email.value, e.target.password.value).pipe(first()).subscribe(() => {
+    const { target: { email, password }  } = e;
+
+    this.fb.signup(email.value, password.value).pipe(first()).subscribe(() => {
       this.router.navigateByUrl('');
     }, (err) => {
       this.errorMessage = err;

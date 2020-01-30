@@ -15,6 +15,8 @@ import { NguiAutoCompleteModule } from "@ngui/auto-complete";
 import { HttpClientModule } from "@angular/common/http";
 import { GuestDetailComponent } from './ui/guest-detail/guest-detail.component';
 import { HistoryComponent } from './ui/history/history.component';
+import { AngularFireModule } from "@angular/fire";
+import { AngularFireDatabaseModule } from "@angular/fire/database";
 
 @NgModule({
   declarations: [
@@ -32,6 +34,8 @@ import { HistoryComponent } from './ui/history/history.component';
     AppRoutingModule,
     FormsModule,
     AngularFireLite.forRoot(environment.config),
+    AngularFireModule.initializeApp(environment.config, 'check-in'),
+    AngularFireDatabaseModule,
     NguiAutoCompleteModule,
     HttpClientModule
   ],

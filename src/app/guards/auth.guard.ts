@@ -13,7 +13,9 @@ export class AuthGuard implements CanActivate {
 
   canActivate(
     route: ActivatedRouteSnapshot,
-    state: RouterStateSnapshot): Observable<boolean> | boolean {
+    state: RouterStateSnapshot
+  ): Observable<boolean> | boolean {
+
     return this.fb.isAuth().pipe(map(
       auth => {
         if (!auth) {
@@ -24,6 +26,7 @@ export class AuthGuard implements CanActivate {
         }
       }
     ));
+    
   }
 
 }

@@ -7,13 +7,17 @@ import {map} from 'rxjs/operators';
 @Injectable({
   providedIn: 'root'
 })
+
 export class AppGuard implements CanActivate {
+
   constructor(public fb: FbService, public router: Router) {
   }
 
   canActivate(
     route: ActivatedRouteSnapshot,
-    state: RouterStateSnapshot): Observable<boolean> | boolean {
+    state: RouterStateSnapshot
+  ): Observable<boolean> | boolean {
+
     return this.fb.isAuth().pipe(map(
       auth => {
         if (auth) {
@@ -24,6 +28,7 @@ export class AppGuard implements CanActivate {
         }
       }
     ));
+    
   }
 
 }

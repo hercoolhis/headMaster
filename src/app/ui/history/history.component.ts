@@ -23,7 +23,7 @@ export class HistoryComponent implements OnInit {
   async updateLast5guests() {
     let Last5CheckedInGuest = await this.gs.getLast5CheckedInGuest();
 
-    this.gs.last5Guests.next(Last5CheckedInGuest);
+    //this.gs.last5Guests.next(Last5CheckedInGuest);
     
   }
 

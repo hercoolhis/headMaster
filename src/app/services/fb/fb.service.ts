@@ -10,8 +10,7 @@ export class FbService {
   constructor(public auth: AngularFireLiteAuth, public fs: AngularFireLiteFirestore) {
   }
 
-  isAuth() {
-    
+  isAuth() {    
     return this.auth.isAuthenticated();
   }
 
@@ -22,8 +21,7 @@ export class FbService {
   signup(email, pass) {
     return this.auth.signup(email, pass);
   }
-
-
+  
   getCities() {
     return this.auth.uid().pipe(switchMap((uid) => {
       return this.fs.read(`${uid}`);
